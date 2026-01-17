@@ -6,6 +6,8 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add('show');
     }
   });
+}, {
+  threshold: 0.1
 });
 
 animatedElements.forEach(el => observer.observe(el));
